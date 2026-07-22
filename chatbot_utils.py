@@ -1,6 +1,9 @@
 import json
 import random
+import ast
+import operator
 from datetime import datetime
+
 
 with open("responses.json", "r") as file:
     responses = json.load(file)
@@ -32,6 +35,49 @@ def save_chat(user, bot):
         file.write(f"You: {user}\n")
         file.write(f"Bot: {bot}\n")
         file.write("-" * 40 + "\n")
+
+OPERATORS = {
+    ast.Add: operator.add,
+    ast.Sub: operator.sub,
+    ast.Mult: operator.mul,
+    ast.Div: operator.truediv
+}
+
+
+def evaluate(node):
+    if isinstance(node, ast.Constant):
+        return node.value
+
+    elif isinstance(node, ast.BinOp):
+        left = evaluate(node.left)
+        right = evaluate(node.right)
+
+        if isinstance(node.op, ast.Div) and right == 0:
+            raise ZeroDivisionError
+
+        operation = OPERATORS[type(node.op)]
+        return operation(left, right)
+
+    else:
+        raise TypeError
+
+
+def calculate(expression):
+    try:
+        tree = ast.parse(expression, mode="eval")
+
+        result = evaluate(tree.body)
+
+        if isinstance(result, float) and result.is_integer():
+            result = int(result)
+
+        return f"Result: {result}"
+
+    except ZeroDivisionError:
+        return "Cannot divide by zero."
+
+    except Exception:
+        return None
 
 
 def get_response(user_input):
@@ -105,5 +151,36 @@ def get_response(user_input):
 
     elif user_input in ["bye", "exit", "quit"]:
         return random.choice(responses["farewells"])
+    
+    elif "square of" in user_input:
+        try:
+            number = float(user_input.replace("square of", "").strip())
+            return f"Result: {number ** 2:g}"
+        except ValueError:
+            return "Please enter a valid number."
+        
+    elif "cube of" in user_input:
+        try:
+            number = float(user_input.replace("cube of", "").strip())
+            return f"Result: {number ** 3:g}"
+        except ValueError:
+            return "Please enter a valid number."
+            
+    elif "sqrt" in user_input:
+        try:
+            number = float(user_input.replace("sqrt", "").strip())
+
+            if number < 0:
+                return "Square root of a negative number is not supported."
+
+            return f"Result: {number ** 0.5:g}"
+
+        except ValueError:
+            return "Please enter a valid number."
+
+    calculation = calculate(user_input)
+
+    if calculation:
+        return calculation
 
     return responses["unknown"]

@@ -19,6 +19,7 @@ The chatbot responds to predefined user inputs using **if-else logic**, demonstr
 - Multiple randomized responses
 - Saves conversation history
 - Handles unknown inputs gracefully
+- Performs basic arithmetic calculations
 - Exit commands (`bye`, `exit`, `quit`)
 
 ---
