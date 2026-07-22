@@ -1,0 +1,58 @@
+{
+    "greetings": [
+        "Hello! How can I help you today?",
+        "Hi! Nice to meet you.",
+        "Welcome! How may I assist you?",
+        "Hello! Hope you're having a great day."
+    ],
+
+    "farewells": [
+        "Goodbye!",
+        "See you later!",
+        "Have a great day!",
+        "Take care!"
+    ],
+
+    "thanks": [
+        "You're welcome.",
+        "Happy to help.",
+        "My pleasure.",
+        "Anytime!"
+    ],
+
+    "name": "My name is DecodeBot.",
+
+    "identity": "I am a rule-based AI chatbot developed using Python.",
+
+    "creator": "I was created as part of DecodeLabs AI Internship Project 1.",
+
+    "purpose": "My purpose is to demonstrate rule-based chatbot logic using Python.",
+
+    "origin": "I was developed for educational purposes using Python.",
+
+    "skills": "I can greet users, answer simple questions, tell the current date and time, and respond using predefined rules.",
+
+    "python": "Python is a high-level programming language widely used in Artificial Intelligence, Web Development, Data Science, and Automation.",
+
+    "ai": "Artificial Intelligence is the simulation of human intelligence in machines that can perform tasks such as learning, reasoning, and problem solving.",
+
+    "unknown": "Sorry, I don't understand that. Type 'help' to see available commands.",
+
+    "help": [
+        "hi",
+        "hello",
+        "how are you",
+        "what is your name",
+        "who are you",
+        "who created you",
+        "where are you from",
+        "what is your purpose",
+        "what is AI",
+        "what is Python",
+        "date",
+        "time",
+        "today's day",
+        "thanks",
+        "bye"
+    ]
+}

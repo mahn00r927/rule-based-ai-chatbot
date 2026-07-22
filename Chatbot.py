@@ -1,48 +1,26 @@
-print("=" * 50)
-print("Welcome to DecodeBot")
-print("Type 'bye' to exit the chatbot.")
-print("=" * 50)
+from chatbot_utils import (
+    display_welcome,
+    get_response,
+    save_chat
+)
 
-greetings = ["hi", "hello", "hey", "good morning", "good evening"]
-farewells = ["bye", "exit", "quit"]
-thanks = ["thanks", "thank you", "thank u"]
-help_commands = ["help", "commands"]
 
-while True:
-    user_input = input("\nYou: ").strip().lower().replace("?", "")
+def main():
+    display_welcome()
 
-    if user_input in greetings:
-        print("Bot: Hello! How can I help you?")
+    while True:
 
-    elif "how are you" in user_input:
-        print("Bot: I am doing well. Thank you for asking.")
+        user_input = input("\nYou > ")
 
-    elif "name" in user_input:
-        print("Bot: My name is DecodeBot.")
+        response = get_response(user_input)
 
-    elif "who are you" in user_input:
-        print("Bot: I am a rule-based AI chatbot developed using Python.")
+        if response:
+            print(f"\nDecodeBot > {response}")
+            save_chat(user_input, response)
 
-    elif "what can you do" in user_input:
-        print("Bot: I can respond to greetings, answer simple questions, and end the conversation.")
+        if user_input.strip().lower() in ["bye", "exit", "quit"]:
+            break
+        
 
-    elif user_input in thanks:
-        print("Bot: You're welcome.")
-
-    elif user_input in help_commands:
-        print("\nAvailable Commands:")
-        print("- hi")
-        print("- hello")
-        print("- how are you")
-        print("- what is your name")
-        print("- who are you")
-        print("- what can you do")
-        print("- thanks")
-        print("- bye")
-
-    elif user_input in farewells:
-        print("Bot: Goodbye. Have a nice day!")
-        break
-
-    else:
-        print("Bot: Sorry, I don't understand that.")
+if __name__ == "__main__":
+    main()
