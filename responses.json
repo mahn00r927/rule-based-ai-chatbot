@@ -2,58 +2,74 @@
     "greetings": [
         "Hello! How can I help you today?",
         "Hi! Nice to meet you.",
-        "Welcome! How may I assist you?",
-        "Hello! Hope you're having a great day."
+        "Welcome! How may I assist you today?",
+        "Hello! Hope you're having a wonderful day.",
+        "Hi there! What can I do for you?"
     ],
 
     "farewells": [
-        "Goodbye!",
-        "See you later!",
-        "Have a great day!",
-        "Take care!"
+        "Goodbye! Have a great day.",
+        "Take care! See you soon.",
+        "It was nice chatting with you. Goodbye!",
+        "See you next time!",
+        "Bye! Stay safe."
     ],
 
     "thanks": [
-        "You're welcome.",
+        "You're welcome!",
         "Happy to help.",
         "My pleasure.",
+        "Glad I could help.",
         "Anytime!"
     ],
 
     "name": "My name is DecodeBot.",
 
-    "identity": "I am a rule-based AI chatbot developed using Python.",
+    "identity": "I am DecodeBot, a rule-based AI chatbot developed in Python for the DecodeLabs AI Internship.",
 
-    "creator": "I was created as part of DecodeLabs AI Internship Project 1.",
+    "creator": "I was created by Mahnoor Rajput as part of the DecodeLabs AI Internship Project 1.",
 
-    "purpose": "My purpose is to demonstrate rule-based chatbot logic using Python.",
+    "origin": "I was built using Python with rule-based logic for educational purposes.",
 
-    "origin": "I was developed for educational purposes using Python.",
+    "purpose": "My purpose is to demonstrate a rule-based chatbot using Python and conditional statements.",
 
-    "skills": "I can greet users, answer simple questions, tell the current date and time, and respond using predefined rules.",
+    "skills": "I can greet users, answer basic questions, solve mathematical expressions, tell the current date and time, and save chat history.",
 
-    "python": "Python is a high-level programming language widely used in Artificial Intelligence, Web Development, Data Science, and Automation.",
+    "ai": "Artificial Intelligence (AI) enables computers and machines to perform tasks that typically require human intelligence, such as learning, reasoning, and decision-making.",
 
-    "ai": "Artificial Intelligence is the simulation of human intelligence in machines that can perform tasks such as learning, reasoning, and problem solving.",
+    "python": "Python is a high-level, easy-to-learn programming language widely used for Artificial Intelligence, Data Science, Web Development, Automation, and Software Development.",
 
-    "unknown": "Sorry, I don't understand that. Type 'help' to see available commands.",
+    "unknown": "Sorry, I don't understand that. Type 'help' to see the list of available commands.",
 
     "help": [
         "hi",
         "hello",
+        "hy",
+        "hey",
+        "good morning",
+        "good afternoon",
+        "good evening",
+        "good night",
         "how are you",
         "what is your name",
         "who are you",
         "who created you",
         "where are you from",
         "what is your purpose",
+        "what can you do",
         "what is AI",
         "what is Python",
         "date",
         "time",
-        "calculator (e.g. 10 + 5)",
         "today's day",
-        "thanks",
+        "square of <number>",
+        "cube of <number>",
+        "sqrt <number>",
+        "10 + 5",
+        "10 + 5 * 2",
+        "(10 + 5) * 2",
+        "thank you",
+        "help",
         "bye"
     ]
 }

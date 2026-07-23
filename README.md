@@ -43,7 +43,6 @@ P1_Chatbot/
 ├── responses.json
 ├── chat_history.txt
 ├── README.md
-├── requirements.txt
 ├── .gitignore
 ├── LICENSE
 └── screenshots/
@@ -164,3 +163,22 @@ This project demonstrates:
 - Web-based chatbot interface
 
 ---
+
+## Testing
+
+Run the following command to execute the unit tests:
+
+```bash
+python -m unittest test_chatbot.py
+```
+
+The project includes tests for:
+
+- Greetings
+- AI responses
+- Python responses
+- Calculator
+- Square operation
+- Cube operation
+- Square root
+- Unknown input handling
